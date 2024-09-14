@@ -1,0 +1,37 @@
+version: '3'
+services:
+  mysql1:
+    image: mysql:5.7
+    platform: linux/amd64
+    networks:
+      - wordpressnet1
+    volumes:
+      - mysqlvol1:/var/lib/mysql
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: myrootpass
+      MYSQL_DATABASE: wordpress000db
+      MYSQL_USER: wordpress000yu
+      MYSQL_PASSWORD: yupass
+  wordpress1:
+    depends_on:
+      - mysql1
+    image: wordpress
+    platform: linux/amd64
+    networks:
+      - wordpressnet1
+    volumes:
+      - wordpressvol1:/var/www/html
+    ports:
+      - 8085:80
+    restart: always
+    environment:
+      WORDPRESS_DB_HOST: mysql1
+      WORDPRESS_DB_NAME: wordpress000db
+      WORDPRESS_DB_USER: wordpress000yu
+      WORDPRESS_DB_PASSWORD: yupass
+networks:
+  wordpressnet1:
+volumes:
+  mysqlvol1:
+  wordpressvol1:

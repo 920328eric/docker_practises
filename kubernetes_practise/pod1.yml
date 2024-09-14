@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: Pod1
+  labels:
+    app: kube
+spec: 
+  containers:
+    - name: ex1
+      image: httpd
+      ports:
+        - containerPort: 80

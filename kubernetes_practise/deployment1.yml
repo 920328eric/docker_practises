@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: deployment1
+spec:
+  selector:
+    matchLabels:
+      app: kube
+  replicas: 5
+  template:
+    metadata:
+      labels:
+        app: kube
+    spec:
+      containers:
+        - name: ex1
+          image: nginx
+          ports:
+            - containerPort: 80
