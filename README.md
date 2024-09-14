@@ -9,7 +9,7 @@
 
 + 『kubernetes_practise』資料夾：為編寫定義檔來建立 Pod
        
-   1.『pod1.yml』檔案：實際應用上很少會單獨編寫『Pod』項目，通常會內涵於 『Deployment』 裡，但學習上可以先看怎麼寫『Pod』，再來寫 『Deployment』 會比較好     
+   1.『pod1.yml』檔案：實際應用上很少會單獨編寫『Pod』項目，通常會內含於 『Deployment』 裡，但學習上可以先看怎麼寫『Pod』，再來寫 『Deployment』 會比較好     
   
    2.『deployment1.yml』檔案：用來管理附加特定標籤的『Pod』，裡頭包含 並列編寫大項目 => 輸入元資料 => 輸入規格內容
      
