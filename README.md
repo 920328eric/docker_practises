@@ -1,4 +1,4 @@
-# 各種有關 docker 的基礎練習架構
+# 各種有關 docker 的架構
 
 ## 使用說明
 + 『docker_compose_practise』資料夾：為利用 docker compose 以 YAML檔 建立容器和運行環境，可一併建立『網路』、『卷宗』  
